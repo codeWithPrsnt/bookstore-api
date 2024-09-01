@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "0a01af51-a0f4-47fe-850f-e760db74d0c4",
+		"name": "bookstore-api",
+		"description": "APIs for CRUD operation for Bookstore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27088889"
+	},
+	"item": [
+		{
+			"name": "User Registration",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "Description: Registers a new user.  \nMethod: POST  \nURL: [http://localhost:3000/api/auth/register](http://localhost:3000/api/auth/register)  \nBody:  \nSelect raw and JSON format.  \nExample JSON body:  \n{  \n\"username\": \"testuser\",  \n\"password\": \"testpassword\"  \n}"
+			},
+			"response": []
+		},
+		{
+			"name": "user Login",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "Description: Logs in a user and returns a JWT token.  \nMethod: POST  \nURL: [http://localhost:3000/api/auth/login](http://localhost:3000/api/auth/login)  \nBody:  \nSelect raw and JSON format.  \nExample JSON body:  \n{  \n\"username\": \"testuser\",  \n\"password\": \"testpassword\"  \n}"
+			},
+			"response": []
+		},
+		{
+			"name": "fetchBooksList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "Description: Retrieves a list of all books with optional query parameters for search and pagination.\n\nuse params like author, genre, title, skip, limit for search and customized list\n\nMethod: GET  \nURL: [http://localhost:3000/api/books](http://localhost:3000/api/books)  \nHeaders:  \nAuthorization: Bearer your_jwt_token"
+			},
+			"response": []
+		},
+		{
+			"name": "addBook",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "Description: Adds a new book to the collection.  \nMethod: POST  \nURL: [http://localhost:3000/api/books](http://localhost:3000/api/books)  \nHeaders:  \nAuthorization: Bearer jwt token generated at login  \nBody:  \nSelect raw and JSON format.  \nExample JSON body:  \n{  \n\"title\": \"Book Title\",  \n\"author\": \"Book Author\",  \n\"genre\": \"Book Genre\",  \n\"publishedDate\": \"2024-01-01T00:00:00.000Z\"  \n}"
+			},
+			"response": []
+		},
+		{
+			"name": "fetchBook",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "Description: Retrieves details of a single book by ID.\n\nMethod: GET  \nURL: [http://localhost:3000/api/books/:id](http://localhost:3000/api/books/:id)  \nHeaders:  \nAuthorization: Bearer your_jwt_token (optional)"
+			},
+			"response": []
+		},
+		{
+			"name": "updateBook",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "Description: Updates an existing book's details.  \nMethod: PUT  \nURL: [http://localhost:3000/api/books/:id](http://localhost:3000/api/books/:id)  \nHeaders:  \nAuthorization: Bearer your_jwt_token  \nBody:  \nSelect raw and JSON format.  \nExample JSON body:\n\n{  \n\"title\": \"Updated Book Title\",  \n\"author\": \"Updated Book Author\",  \n\"genre\": \"Updated Book Genre\",  \n\"publishedDate\": \"2024-02-01T00:00:00.000Z\"  \n}"
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteBook",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "Description: Deletes a book by ID.  \nMethod: DELETE  \nURL: [http://localhost:3000/api/books/:id](http://localhost:3000/api/books/:id)  \nHeaders:  \nAuthorization: Bearer your_jwt_token"
+			},
+			"response": []
+		}
+	]
+}
